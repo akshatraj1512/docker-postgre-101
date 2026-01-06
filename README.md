@@ -2,6 +2,10 @@
 
 Executing Local Scripts inside a Docker Container (Bind Mounts).
 
+- Prerequisites:
+
+  `Python` and `Docker` installed and running.
+  
 - In terminal:
 
 ```bash
@@ -13,6 +17,7 @@ cd /app/test
 ```bash
 python script.py
 ```
+
 
 
 
