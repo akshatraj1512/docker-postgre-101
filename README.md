@@ -57,13 +57,11 @@ uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
   ```bash
   \dt
   -- List tables
-\dt
-
-CREATE TABLE test (id INTEGER, name VARCHAR(50));
-
-INSERT INTO test VALUES (1, 'vadapav');
-
-SELECT * FROM test;
-
-\q
+  CREATE TABLE test (id INTEGER, name VARCHAR(50));
+  
+  INSERT INTO test VALUES (1, 'vadapav');
+  
+  SELECT * FROM test;
+  
+  \q
   ```
