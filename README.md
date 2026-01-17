@@ -42,7 +42,7 @@ docker build -t test:pandas .
 docker run -it test:pandas < any number >
 ```
 
-## 3. Running Postgres SQL inside Docker (Bind Mounds).
+## 4. Running Postgres SQL inside Docker (Bind Mounds).
   
 - In terminal:
 
@@ -65,3 +65,15 @@ uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
   
   \q
   ```
+
+## 5. Data processing with pandas and data ingestion (chunking).
+  
+- In terminal:
+
+```bash
+uv add --dev jupyter
+uv run jupyter notebook
+```
+- In notebook:
+
+Refer to `ingestion.py`.
