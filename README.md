@@ -53,8 +53,8 @@ mkdir ny_taxi_postgres_data
 docker run -it \
   -e POSTGRES_USER="root" \                           
   -e POSTGRES_PASSWORD="root" \                          
-  -e POSTGRES_DB="ny_taxi" \                                #environment variables
-  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql \     #and bind mound
+  -e POSTGRES_DB="ny_taxi" \                               
+  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql \     
   -p 5432:5432 \
   postgres:18
 
@@ -83,7 +83,7 @@ docker run -it --rm \
   -e POSTGRES_USER="root" \
   -e POSTGRES_PASSWORD="root" \
   -e POSTGRES_DB="ny_taxi" \
-  -v ny_taxi_postgres_data:/var/lib/postgresql \   #named volume
+  -v ny_taxi_postgres_data:/var/lib/postgresql \
   -p 5432:5432 \
   postgres:18
 ```
@@ -119,5 +119,3 @@ uv run pgcli -h localhost -p 5432 -u root -d ny_taxi
   GROUP BY DATE(tpep_pickup_datetime)
   ORDER BY pickup_date;
   ```
-
-
